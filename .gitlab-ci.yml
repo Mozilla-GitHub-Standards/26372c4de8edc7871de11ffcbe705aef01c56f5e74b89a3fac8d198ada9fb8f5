@@ -19,13 +19,13 @@ deploy stage:
     - dp_cache_tweak
   script: ./bin/ci-mirror.sh
 
-deploy prod:
-  stage: deploy
-  tags: 
-  - meao
-  variables:
-    BUCKET_PATH: ${PROD_BUCKET_PATH}
-  only:
-    refs:
-    - production
-  script: ./bin/ci-mirror.sh
+# deploy prod:
+#   stage: deploy
+#   tags: 
+#   - meao
+#   variables:
+#     BUCKET_PATH: ${PROD_BUCKET_PATH}
+#   only:
+#     refs:
+#     - production
+#   script: ./bin/ci-mirror.sh
