@@ -1,5 +1,5 @@
 #!/bin/bash -e
-cd ${CI_PROJECT_DIR}
+echo $(PWD)
 ./bin/mirror.sh 
 
 aws s3 sync ./_site ${BUCKET_PATH} \
